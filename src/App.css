@@ -1,5 +1,7 @@
 .App {
   display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width:70%;
 }
 
 .Header {
@@ -8,21 +10,20 @@
   height: 50px;
   font-size: 25px;
   color: black;
-  text-align: center;
+  text-align: left;
+  margin-left: 30%;
 }
 
 .CityList {
   float: left;
   background-color: rgb(221, 224, 200);
-  width: 150px;
-  margin-right: 20px;
+  width: 15%;
 }
 
 .CityTitle {
   height: 80px;
   padding-top: 40px;
   text-align: center;
-  font-family: Courier New, Courier, monospace;
   background-color: white;
   border-style: solid;
   border-radius: 1px;
@@ -33,12 +34,15 @@
   height: 80px;
   padding-top: 40px;
   text-align: center;
-  font-family: Courier New, Courier, monospace;
 }
 
 .City:hover {
   background-color: rgb(6, 29, 29);
   color: white;
+}
+
+.Section {
+  margin-left: 15%;
 }
 
 .Observations {
@@ -56,6 +60,10 @@
 }
 
 .AllObservations {
+  margin: 20px;
+}
+
+.InputFormWrapper {
   margin: 20px;
 }
 
@@ -84,6 +92,7 @@
 
 .SendButton {
   background-color: brown;
+  color: white;
   width: 100px;
   height: 30px;
 }
@@ -94,19 +103,39 @@
 }
 
 .InfoBox {
-  color: red;
+  color: purple;
   background-color: white;
   border-style: solid;
-  border-radius: 1px;
-  border-color: red;
+  border-radius: 10px;
+  border-color: purple;
   margin: 20px;
   display: inline-table;
 }
 
-h3 {
+.InfoText {
+  margin: 20px;
+}
+
+.CityName {
   text-align: center;
 }
 
 input {
   width: 100px;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+}
+
+th {
+  font-size: 12px;
+  font-style: normal;
+}
+
+td {
+  border-style: groove;
 }

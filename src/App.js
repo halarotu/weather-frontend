@@ -3,11 +3,11 @@ import {Header, CityList, Observations, InputForm} from './Components'
 import ObservationService from './services/ObservationService'
 import './App.css';
 
-const cities = [{name: 'Tokyo', id: 0}, 
-                {name: 'Helsinki', id: 1}, 
-                {name: 'New York', id: 2}, 
-                {name: 'Amsterdam', id: 3},
-                {name: 'Dubai', id: 4}]
+const cities = [{name: 'Tokyo', id: 0, lat: 35.6584421, lon: 139.7328635}, 
+                {name: 'Helsinki', id: 1, lat: 60.1697530, lon: 24.9490830}, 
+                {name: 'New York', id: 2, lat: 40.7406905, lon:-73.9938438}, 
+                {name: 'Amsterdam', id: 3, lat: 52.3650691, lon: 4.9040238},
+                {name: 'Dubai', id: 4, lat: 25.092535, lon: 55.1562243}]
 
 
 class App extends Component {
@@ -65,7 +65,7 @@ class App extends Component {
       const observation = {temperature: this.state.temperature, location: this.state.citySelected, dateTime: dateTime}
       const sendPromise = ObservationService.send(observation)
       sendPromise.then(() => this.getAllObservations())
-      this.setState({temperature: ''})
+      this.setState({temperature: '', infoText: 'Observation sent!'})
     }
     else {
       this.setState({infoText: 'Fill data correctly!'})

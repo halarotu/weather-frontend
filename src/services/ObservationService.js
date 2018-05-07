@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = '/observation' //'https://weather-backend-ha.herokuapp.com/observation'
+const baseUrl = '/observation'
 
 const getAll = async () => {
     const response = await axios.get(baseUrl)
